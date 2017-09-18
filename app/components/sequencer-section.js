@@ -14,8 +14,6 @@ export default Ember.Component.extend({
   isChecked: false,
   actions: {
     toggleLight: function() {
-      event.stopPropagation();
-      console.log(event);
       this.toggleProperty("isChecked");
     }
   }

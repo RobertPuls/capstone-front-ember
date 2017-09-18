@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   actions: {
     toggleLight: function() {
       this.toggleProperty("isChecked");
-      console.log(this.isChecked);
     }
   }
 });

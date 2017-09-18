@@ -21,6 +21,8 @@ export default Ember.Route.extend({
       let bass = $(".bass");
       let hihat = $(".hihat");
 
+      console.log("right", right);
+
       for (let i = 0; i < bass.length; i++) {
         if (i % 2 === 0) {
           right[i / 2] = right[i / 2].checked;
