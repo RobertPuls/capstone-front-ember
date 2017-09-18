@@ -1,16 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
-  boxes: [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ],
+export default Ember.Controller.extend({
   isChecked: false,
   actions: {
     toggleLight: function() {

@@ -1,16 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
-  boxes: [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ],
+export default Ember.Controller.extend({
 
   actions: {
     playBeat: function() {

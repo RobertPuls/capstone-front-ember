@@ -1,18 +1,17 @@
 <div id="hihat" class="test">
   {{#each boxes as |box|}}
-    <div class="box"><input type="checkbox" class="hihat"></div>
-    <div class="box"><input type="checkbox" class="hihat"></div>
+    {{sequencer-hihat class="inline"}}
+    {{sequencer-hihat class="inline"}}
   {{/each}}
 </div>
 <div id="snare" class="test">
   {{#each boxes as |box|}}
-    <div class="box"><input type="checkbox" class="snareRight"></div>
-    <div class="box"><input type="checkbox" class="snareLeft"></div>
+    {{sequencer-snare class="inline"}}
   {{/each}}
 </div>
 <div id="bass" class="test">
   {{#each boxes as |box|}}
-    <div class="box"><input type="checkbox" class="bass"></div>
-    <div class="box"><input type="checkbox" class="bass"></div>
+    {{sequencer-bass class="inline"}}
+    {{sequencer-bass class="inline"}}
   {{/each}}
 </div>
