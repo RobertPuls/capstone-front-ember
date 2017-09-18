@@ -1,0 +1,23 @@
+<form {{action 'playBeat' on="submit"}}>
+  <article id="app">
+    <section id="labels">
+      <p class="label">Hihat</p>
+      <p class="label">Snare</p>
+      <p class="label">Bass</p>
+    </section>
+    <section id="sequencer">
+      {{sequencer-section}}
+    </section>
+  </article>
+  <section id="control">
+    <div class="bpm">
+      <p for="bpm">BPM</p>
+      <input type="text" class="bpm" name="bpm" value="70">
+    </div>
+    <div id="circle"></div>
+    <button type="submit" id="play" name="play">Play</button>
+    <button type="submit" id="stop" name="stop">Stop</button>
+    <button type="submit" id="save" name="save">Save</button>
+    <button type="submit" id="upload" name="upload">Upload</button>
+  </section>
+</form>
