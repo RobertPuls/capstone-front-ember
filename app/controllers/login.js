@@ -29,12 +29,11 @@ export default Ember.Controller.extend({
   user: Ember.inject.service(),
 
   actions: {
-    signUp: function() {
+    login: function() {
       let address = "";
       var newUser = {
         email: this.get("userEmail"),
         password: this.get("userPassword"),
-        address: this.get("userAddress")
       }
       console.log(this.user);
       // let newUser = {
@@ -42,7 +41,7 @@ export default Ember.Controller.extend({
       //   password: this.get("userPassword"),
       //   address: this.get("userAddress")
       // }
-      $.post("https://capstone-back.herokuapp.com/user/signup/users", newUser, function(res) {
+      $.post("https://capstone-back.herokuapp.com/user/login/users", newUser, function(res) {
         address = res.address;
         console.log(res);
         // console.log("address", address);

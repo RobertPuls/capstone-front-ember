@@ -4,16 +4,6 @@ export default Ember.Route.extend({
   model() {
     return this.store.findAll('beat');
   },
-  boxes: [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-  ],
 
   actions: {
     playBeat: function() {

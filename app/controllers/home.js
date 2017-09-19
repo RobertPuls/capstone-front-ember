@@ -4,7 +4,8 @@ export default Ember.Controller.extend({
   model() {
     return this.store.findAll('beat');
   },
-  beats: $.get("http://10.6.67.80:3000/beats"),
+  user: Ember.inject.service(),
+  url: Ember.computed.alias("user.address"),
 
   makeRequest: function(url, data, method) {
     var settings = {
@@ -53,12 +54,13 @@ export default Ember.Controller.extend({
         hihat
       ]
 
-      this.makeRequest("http://10.6.67.80:3000/", pattern, "POST");
+      this.makeRequest(`${this.get("url")}`, pattern, "POST");
     },
     stopBeat: function() {
-      console.log(this.beats.responseJSON);
+      // console.log(this.beats.responseJSON);
       $("#circle").removeClass("on");
-      this.makeRequest("http://10.6.67.80:3000/stop", {}, "POST");
+      this.makeRequest(`${this.get("url")}/stop`, {}, "POST");
+
     },
     saveBeat: function() {
       let right = $(".main>#snare>.inline>.box.right");

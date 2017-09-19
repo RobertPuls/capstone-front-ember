@@ -1,5 +1,5 @@
 <article class="inputMain">
-  <form class="metal" {{action 'signUp' on="submit"}}>
+  <form class="metal" {{action 'login' on="submit"}}>
     <div class="">
       <label class="inputLabel" for="email">Email</label>
       {{input class="userInput" type="text" value=userEmail}}
@@ -7,10 +7,6 @@
     <div class="">
       <label class="inputLabel password" for="password">Password</label>
       {{input class="userInput" type="text" name="password" value=userPassword}}
-    </div>
-    <div class="">
-      <label for="address">Pi address</label>
-      {{input class="userInput" type="text" name="address" value=userAddress}}
     </div>
     {{!-- {{input class="userInput" type="submit" value="Submit"}} --}}
     <button type="submit" name="button">Signup</button>
