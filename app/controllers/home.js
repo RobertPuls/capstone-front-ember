@@ -61,10 +61,10 @@ export default Ember.Controller.extend({
       this.makeRequest("http://10.6.67.80:3000/stop", {}, "POST");
     },
     saveBeat: function() {
-      let right = $("#snare>.inline>.box.right");
-      let left = $("#snare>.inline>.box.left");
-      let bass = $("#bass>.inline>.box");
-      let hihat = $("#hihat>.inline>.box");
+      let right = $(".main>#snare>.inline>.box.right");
+      let left = $(".main>#snare>.inline>.box.left");
+      let bass = $(".main>#bass>.inline>.box");
+      let hihat = $(".main>#hihat>.inline>.box");
 
       for (let i = 0; i < bass.length; i++) {
         console.log("times ran", i + 1);

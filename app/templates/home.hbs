@@ -5,8 +5,8 @@
       <p class="label">Snare</p>
       <p class="label">Bass</p>
     </section>
-    <section id="sequencer">
-      {{sequencer-section}}
+    <section class="sequencer">
+      {{sequencer-section class="main"}}
     </section>
   </article>
   <section id="control">
@@ -21,8 +21,17 @@
     <button type="submit" id="upload" name="upload">Upload</button>
   </section>
 </form>
-
+<br>
 {{#each model as |beat|}}
-  {{saved-beats beat=beat.pattern}}
-  <br>
+<article id="app">
+  <section id="labels">
+    <p class="label">Hihat</p>
+    <p class="label">Snare</p>
+    <p class="label">Bass</p>
+  </section>
+  <section class="sequencer">
+    {{saved-beats beat=beat.pattern}}
+  </section>
+</article>
+<br>
 {{/each}}

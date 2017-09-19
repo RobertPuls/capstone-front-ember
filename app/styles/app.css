@@ -92,7 +92,7 @@ button {
   background-position-y: -290px;
 }
 
-#sequencer {
+.sequencer {
   padding: 1%;
   padding-left: 2.2%;
   border-left: #e9ecef solid;
@@ -218,4 +218,25 @@ input {
 
 .inline {
   display: inline;
+}
+
+.userInput {
+  margin-right: 1%;
+  width: 400px;
+  text-align: center;
+  /*margin-top: -0.7%;*/
+  font-size: 40px;
+  opacity: 1;
+}
+
+.inputMain {
+  margin-left: 30%;
+}
+
+.inputLabel {
+  margin-right: 3.3%;
+}
+
+.password {
+  margin-right: 0.5%;
 }
