@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  beats: $.get("http://10.6.67.80:3000/beats"),
+  model() {
+    return this.store.findAll('beat');
+  },
   boxes: [
     [],
     [],

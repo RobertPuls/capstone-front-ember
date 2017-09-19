@@ -16,8 +16,13 @@
     </div>
     <div id="circle"></div>
     <button type="submit" id="play" name="play">Play</button>
-    <button type="submit" id="stop" name="stop">Stop</button>
-    <button type="submit" id="save" name="save">Save</button>
+    <button type="submit" {{action 'stopBeat' on="click"}}>Stop</button>
+    <button type="button" {{action 'saveBeat' on="click"}}>Save</button>
     <button type="submit" id="upload" name="upload">Upload</button>
   </section>
 </form>
+
+{{#each model as |beat|}}
+  {{saved-beats beat=beat.pattern}}
+  <br>
+{{/each}}

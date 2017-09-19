@@ -1,0 +1,21 @@
+{{#each beat as |line|}}
+  <div id="hihat" class="test">
+    {{!-- {{test line}} --}}
+    {{#each (test line) as |value|}}
+    {{!-- {{if (test key)}} --}}
+      {{sequencer-hihat class="inline" isChecked=value}}
+      {{!-- {{/if}} --}}
+    {{/each}}
+  </div>
+  <div id="snare" class="test">
+    {{#each (test line) as |value|}}
+      {{sequencer-snare class="inline" isChecked=value}}
+      {{/each}}
+  </div>
+  <div id="bass" class="test">
+    {{#each (test line) as |value|}}
+      {{sequencer-bass class="inline" isChecked=value}}
+      {{/each}}
+
+  </div>
+{{/each}}
