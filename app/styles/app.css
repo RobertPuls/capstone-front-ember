@@ -45,7 +45,7 @@ font-family: letters-2;
 src: local("letters II") local("letters-II"), url(letters.ii-fenotype.ttf);
 }*/
 
-#app {
+.app {
   border: #e9ecef solid;
   border: #e9ecef outset;
   border-radius: 5px;

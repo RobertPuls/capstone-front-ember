@@ -1,20 +1,24 @@
-  <div id="hihat" class="test">
-    {{#each (eq beat 3) as |line|}}
-      {{sequencer-hihat class="inline" isChecked=line}}
-    {{/each}}
-  </div>
-  <div id="snare" class="test">
-      {{#each (eq beat 0) as |line|}}
-      {{sequencer-snare-right class="inline" isChecked=line}}
-      {{/each}}
-
-      {{#each (eq beat 1) as |line|}}
-      {{sequencer-snare-left class="inline" isChecked=line}}
-      {{/each}}
-  </div>
-  <div id="bass" class="test">
-    {{#each (eq beat 2) as |line|}}
-      {{sequencer-bass class="inline" isChecked=line}}
+<div id="hihat" class="test">
+  {{#each (eq beat 3) as |line|}}
+    {{sequencer-hihat class="inline" isChecked=line}}
+  {{/each}}
+</div>
+<div id="snare" class="test">
+    {{#each (eq beat 0) as |line|}}
+    {{sequencer-snare-right class="inline" isChecked=line}}
     {{/each}}
 
-  </div>
+    {{#each (eq beat 1) as |line|}}
+    {{sequencer-snare-left class="inline" isChecked=line}}
+    {{/each}}
+</div>
+<div id="bass" class="test">
+  {{#each (eq beat 2) as |line|}}
+    {{sequencer-bass class="inline" isChecked=line}}
+  {{/each}}
+  <section id="control">
+    <div id="circle"></div>
+    <button type="submit" {{action 'playBeat' on="click"}}>Play</button>
+    <button type="submit" {{action 'stopBeat' on="click"}}>Stop</button>
+  </section>
+</div>
