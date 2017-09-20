@@ -4,12 +4,8 @@
   {{/each}}
 </div>
 <div id="snare" class="test">
-    {{#each (eq beat 0) as |line|}}
+    {{#each (test (eq beat 0) (eq beat 1)) as |line|}}
     {{sequencer-snare-right class="inline" isChecked=line}}
-    {{/each}}
-
-    {{#each (eq beat 1) as |line|}}
-    {{sequencer-snare-left class="inline" isChecked=line}}
     {{/each}}
 </div>
 <div id="bass" class="test">

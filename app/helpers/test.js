@@ -1,20 +1,14 @@
 import Ember from 'ember';
 
 export function test(params) {
+  console.log(params);
   let myArr = [];
-  console.log("params", params);
-
-  // for (let i = 0; i < params.length; i++) {
-  //   console.log("i", i);
-  //   console.log("params[i]", params[i]);
-  //   for (let j = 0; j < params[0].length; j++) {
-  //     console.log("params[i][j]", params[i][j]);
-  //     myArr.push(params[i][j]);
-  //   }
-  // }
-  return params;
-  // console.log(myArr);
-  // return myArr;
+  for (let i = 0; i < params[0].length; i++) {
+    myArr.push(params[0][i]);
+    myArr.push(params[1][i])
+  }
+  console.log(myArr);
+  return myArr;
 }
 
 export default Ember.Helper.helper(test);

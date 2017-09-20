@@ -27,6 +27,7 @@ export default Ember.Component.extend({
   },
   actions: {
     playBeat: function() {
+      console.log("this", this.beat);
       $("#circle").addClass("on");
 
       let right = $("#snare>.inline>.box.right");
@@ -51,6 +52,12 @@ export default Ember.Component.extend({
       ]
 
       this.makeRequest(`${this.get("url")}`, pattern, "POST");
+    },
+    stopBeat: function() {
+      // console.log(this.beats.responseJSON);
+      $("#circle").removeClass("on");
+      this.makeRequest(`${this.get("url")}/stop`, {}, "POST");
+
     },
   }
 });
