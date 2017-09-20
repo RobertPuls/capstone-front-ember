@@ -87,5 +87,5 @@ export default Ember.Controller.extend({
       // this.makeRequest("http://10.6.67.80:3000/beats", pattern);
 
     }
-  }
+  },
 });

@@ -30,28 +30,9 @@ export default Ember.Component.extend({
       console.log("this", this.beat);
       $("#circle").addClass("on");
 
-      let right = $("#snare>.inline>.box.right");
-      let left = $("#snare>.inline>.box.left");
-      let bass = $("#bass>.inline>.box");
-      let hihat = $("#hihat>.inline>.box");
+      console.log(this.get("url"));
 
-      for (let i = 0; i < bass.length; i++) {
-        console.log("times ran", i + 1);
-        if (i % 2 === 0) {
-          right[i / 2] = right[i / 2].classList.contains("checked");
-          left[i / 2] = left[i / 2].classList.contains("checked");
-        }
-        bass[i] = bass[i].classList.contains("checked");
-        hihat[i] = hihat[i].classList.contains("checked");
-      }
-      let pattern = [
-        right,
-        left,
-        bass,
-        hihat
-      ]
-
-      this.makeRequest(`${this.get("url")}`, pattern, "POST");
+      this.makeRequest(`${this.get("url")}`, this.beat, "POST");
     },
     stopBeat: function() {
       // console.log(this.beats.responseJSON);
