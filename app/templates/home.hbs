@@ -18,20 +18,7 @@
     <button type="submit" id="play" name="play">Play</button>
     <button type="submit" {{action 'stopBeat' on="click"}}>Stop</button>
     <button type="button" {{action 'saveBeat' on="click"}}>Save</button>
-    <button type="submit" id="upload" name="upload">Upload</button>
+    <button type="button" {{action 'uploadBeat' on="click"}} id="upload" name="upload">Upload</button>
   </section>
 </form>
 <br>
-{{#each model as |beat|}}
-<article class="app">
-  <section id="labels">
-    <p class="label">Hihat</p>
-    <p class="label">Snare</p>
-    <p class="label">Bass</p>
-  </section>
-  <section id="{{beat.id}}" class="sequencer">
-    {{saved-beats beat=beat.pattern}}
-  </section>
-</article>
-<br>
-{{/each}}

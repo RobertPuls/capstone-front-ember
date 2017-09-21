@@ -1,5 +1,4 @@
 * {
-  color: #FCFBE3;
   font-family: "BadMofo", monospace;
   /*font-family: "Letters";
 font-family: "Letters II";
@@ -46,6 +45,7 @@ src: local("letters II") local("letters-II"), url(letters.ii-fenotype.ttf);
 }*/
 
 .app {
+  color: #FCFBE3;
   border: #e9ecef solid;
   border: #e9ecef outset;
   border-radius: 5px;
@@ -183,6 +183,7 @@ input {
   justify-content: space-around;
   font-size: 30px;
   display: flex;
+  color: black !important;
 }
 
 .head>ul {
@@ -191,8 +192,11 @@ input {
   flex-wrap: nowrap;
 }
 
-.head>ul>li {
-  padding-left: 6%;
+.head>ul>a {
+  color: black !important;
+  /*margin: 1%;*/
+  /*padding-left: 6% !important;*/
+  /*margin-left: 6%;*/
 }
 
 .screwsLeft {
@@ -234,9 +238,69 @@ input {
 }
 
 .inputLabel {
+  width: 41.4%;
   margin-right: 3.3%;
 }
 
-.password {
+.beatsButton {
+  width: 150px;
+}
+
+.tut {
+  flex-direction: column;
+  font-size: 150%;
+  background-size: cover;
+  background-position-x: -100px;
+}
+
+.tutlink {
+  margin-left: 10px;
+  color: #FCFBE3;
+}
+
+.moveRight {
+  margin-left: 2%;
+}
+
+.nav {
+  margin-left: 7%;
+}
+
+.login {
+  margin-left: 4%;
+  width: 23%;
+  height: 70px;
+}
+
+.signup {
+  height: 70px;
+}
+
+.back {
+  background-image: url("http://images.all-free-download.com/images/graphiclarge/metal_background_of_highdefinition_picture_2_169714.jpg");
+  padding: 2%;
   margin-right: 0.5%;
+}
+
+
+/*.password {
+  padding-right: 2.5%;
+  margin-right: 0.5%;
+}*/
+
+
+/*.email {
+  padding-right: 3.6%;
+  padding-left: 3.6%;
+  margin-right: 0.6%;
+}*/
+
+.subroute {
+  padding-top: 1%;
+  padding-bottom: 3.5%;
+  margin-bottom: 1%;
+}
+
+.subroute.first {
+  margin-left: 36%;
 }

@@ -7,11 +7,20 @@
         <img class="screw" src="https://cdn.sstatic.net/Sites/diy/img/apple-touch-icon.png?v=26d138b3a1da" alt="">
         <img class="screw" src="https://cdn.sstatic.net/Sites/diy/img/apple-touch-icon.png?v=26d138b3a1da" alt="">
       </div>
-      <h1>Title</h1>
+      <h1>BeatBot</h1>
       <ul>
-        <li>Thing 1</li>
-        <li>Thing 2</li>
-        <li>Thing 3</li>
+        {{#link-to 'home' class="nav"}}
+        {{!-- Sequencer --}}
+          <li>Sequencer</li>
+        {{/link-to}}
+        {{#link-to 'beats' class="nav"}}
+        {{!-- Saved Beats --}}
+          <li>Saved Beats</li>
+        {{/link-to}}
+        {{#link-to 'tutorial' class="nav"}}
+        {{!-- Tutorial --}}
+          <li>Tutorial</li>
+        {{/link-to}}
       </ul>
     </article>
 {{outlet}}

@@ -86,6 +86,42 @@ export default Ember.Controller.extend({
 
       // this.makeRequest("http://10.6.67.80:3000/beats", pattern);
 
+    },
+    uploadBeat: function() {
+      let right = $(".main>#snare>.inline>.box.right");
+      let left = $(".main>#snare>.inline>.box.left");
+      let bass = $(".main>#bass>.inline>.box");
+      let hihat = $(".main>#hihat>.inline>.box");
+
+      for (let i = 0; i < bass.length; i++) {
+        console.log("times ran", i + 1);
+        if (i % 2 === 0) {
+          right[i / 2] = right[i / 2].classList.contains("checked");
+          left[i / 2] = left[i / 2].classList.contains("checked");
+        }
+        bass[i] = bass[i].classList.contains("checked");
+        hihat[i] = hihat[i].classList.contains("checked");
+      }
+
+      var saved = this.store.createRecord('saved', {
+        pattern: [right, left, bass, hihat]
+      })
+
+      // let pattern = [
+      //   right,
+      //   left,
+      //   bass,
+      //   hihat
+      // ]
+      //
+      // $.post("https://capstone-back-new.herokuapp.com/beats/saveds", pattern, function(data) )
+
+      saved.save();
+
+
+
+      // this.makeRequest("http://10.6.67.80:3000/beats", pattern);
+
     }
   },
 });

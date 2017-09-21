@@ -1,21 +1,23 @@
 <article class="inputMain">
   <form class="metal" {{action 'signUp' on="submit"}}>
     <div class="">
-      <label class="inputLabel" for="email">Email</label>
+      <label class="head inputLabel back email" for="email">Email</label>
       {{input class="userInput" type="text" value=userEmail}}
     </div>
+    <br>
     <div class="">
-      <label class="inputLabel password" for="password">Password</label>
+      <label class="head inputLabel password back" for="password">Password</label>
       {{input class="userInput" type="text" name="password" value=userPassword}}
     </div>
+    <br>
     <div class="">
-      <label for="address">Pi address</label>
-      {{input class="userInput" type="text" name="address" value=userAddress}}
+      <label class="head inputLabel back" for="address">Pi address</label>
+      {{input class="userInput"  type="text" name="address" value=userAddress}}
     </div>
     {{!-- {{input class="userInput" type="submit" value="Submit"}} --}}
-    <button type="submit" name="button">Signup</button>
-    {{#link-to "home"}}
-      Home
+    <button type="submit" class="login" name="button">Signup</button>
+    {{#link-to "login"}}
+      <button type="button" class="signup" name="button">Login</button>
     {{/link-to}}
   </form>
 </article>
