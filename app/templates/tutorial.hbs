@@ -3,40 +3,41 @@
     <h1 class="big">Tutorial</h1>
   </div>
   <section class="moveRight" id="supplies">
-      <h1>Supplies</h1>
+      <h2>Supplies</h2>
     <ul>
-      <li>Raspberry Pi</li>
-      <li>Mirco SD</li>
-      <li>Drumsticks</li>
-      <li>Servo  <a class="tutlink" href="https://www.amazon.com/Genuine-Helicopter-Airplane-controls-TowerPro/dp/B019H9BNTQ/ref=sr_1_2_sspa?s=toys-and-games&ie=UTF8&qid=1505926186&sr=1-2-spons&keywords=Sg90+Servo+9g+Motor+TowerPro&psc=1">(Servos I used)</a></li>
-      <li>A way to mount the servos to the drum  <a class="tutlink" href="https://www.amazon.com/gp/product/B00BPDIBP2/ref=oh_aui_search_detailpage?ie=UTF8&psc=1">I used DrumClips</a></li>
-      <li>A Drum</li>
+      <li class="tutP">Raspberry Pi</li>
+      <li class="tutP">Mirco SD</li>
+      <li class="tutP">Drumsticks</li>
+      <li class="tutP">Servo<a class="tutlink" href="https://www.amazon.com/Genuine-Helicopter-Airplane-controls-TowerPro/dp/B019H9BNTQ/ref=sr_1_2_sspa?s=toys-and-games&ie=UTF8&qid=1505926186&sr=1-2-spons&keywords=Sg90+Servo+9g+Motor+TowerPro&psc=1">Servos I used</a></li>
+      <li class="tutP">A way to mount the servos to the drum  <a class="tutlink" href="https://www.amazon.com/gp/product/B00BPDIBP2/ref=oh_aui_search_detailpage?ie=UTF8&psc=1">I used DrumClips</a></li>
+      <li class="tutP">A Drum</li>
     </ul>
   </section>
   <section class="moveRight" id="pi">
-    <h1>Setting up the Raspberry Pi</h1>
-    <ul>
-      <li>Download Raspbian</li>
-      <li>Move the image to the SD card</li>
-      <li>Install Node.js on your Pi <ul>
-        <li>Run these commands in Treminal</li>
-        <li>wget http://node-arm.herokuapp.com/node_latest_armhf.deb</li>
-        <li>sudo dpkg -i node_latest_armhf.deb</li>
-      </ul></li>
-      <li>Install PiGPIO on your Pi<ul>
-        <li>Run this commands in Treminal</li>
-        <li>sudo apt-get install pigpio</li>
-      </ul></li>
-      <li>Install MongoDB on your Pi <ul>
-        <li>Run this commands in Treminal</li>
-        <li>sudo apt-get install mongodb-server</li>
-      </ul></li>
-      <li>Download the code <ul>
-        <li>Run this command in Terminal</li>
-        <li>git clone https://github.com/RobertPuls/drumback.git</li>
-      </ul></li>
-      <li>cd into the directory with the downloaded code</li>
-      <li>Run npm start in terminal</li>
-    </ul>
+    <h2>Setting up the Raspberry Pi</h2>
+    <p class="tutP">First You'll need to down load Raspberry Pi's OS, Raspbian. Then plug your micro SD card into your computer and format it. Once thats finished reformatting move the Raspbian disk image to the SD card.</p>
+    <h2>Install Node.js on your Pi</h2>
+    <p class="tutP">To install Node.js on your Pi run these commands in the Terminal:</p>
+    <p class="tutP">wget http://node-arm.herokuapp.com/node_latest_armhf.deb</p>
+    <p class="tutP">sudo dpkg -i node_latest_armhf.deb</p>
+    <h2>Install PiGPIO on your Pi</h2>
+    <p class="tutP">Next, you need to install the PiGPIO. To do this run this command in the Pi's Terminal:</p>
+    <p class="tutP">sudo apt-get install pigpio</p>
+    <h2>Install MongoDB on your Pi</h2>
+    <p class="tutP">After that, you'll need to install the MongoDB. To do this run this command in the Pi's Terminal:</p>
+    <p class="tutP">sudo apt-get install mongodb-server</p>
+    <h2>Attach your components to your Pi</h2>
+    <p class="tutP">Now you can connect your servos to your Pi. If you are using the same servos as me you will attach the brown wire to a ground pin, the red wire attaches to the 3.3v pin, and the yellow wire connects to the GPIO pin</p>
+    <p class="tutP">The GPIO pins for the snare servo's are GPIO4 (Right Servo) and GPIO2 (Left Servo)</p>
+    <p class="tutP">Next, attach your drum sticks to the servos (I cut my drum sticks in half to make them lighter) and you servos to the you mount</p>
+    <img class="large" src="https://www.element14.com/community/servlet/JiveServlet/previewBody/73950-102-11-339300/pi3_gpio.png" alt="">
+    <img src="https://i.imgur.com/Ci7hUme.jpg" alt="">
+    <h2>Download the Code!</h2>
+    <p class="tutP">Now that all the hardware is set up all you have to do is download the code. To do this you just need to run this command in your Terminal:</p>
+    <p class="tutP">git clone https://github.com/RobertPuls/drumback.git</p>
+    <p class="tutP">Next you'll need to cd into the directory with the downloaded code and run this last command in Terminal:</p>
+    <p class="tutP">npm start</p>
+    <h2>Ready to go</h2>
+    <p class="tutP">Now you're ready to sign up for BeatBot. To signup you'll need your Raspberry Pi IP Address. To get this you can run ifconfig in the Pi's Terminal. You want the address next to inet under the 0wlan section.</p>
   </section>
 </article>

@@ -13,8 +13,8 @@
     {{sequencer-bass class="inline" isChecked=line}}
   {{/each}}
   <section id="control">
-    <div id="circle"></div>
-    <button type="submit" class="beatsButton" {{action 'playBeat' on="click"}}>Play</button>
+    <div id="circle" class="circle"></div>
+    <button type="submit" class="beatsButton left" {{action 'playBeat' on="click"}}>Play</button>
     <button type="submit" class="beatsButton" {{action 'stopBeat' on="click"}}>Stop</button>
   </section>
 </div>

@@ -1,8 +1,6 @@
-* {
+body {
   font-family: "BadMofo", monospace;
-  /*font-family: "Letters";
-font-family: "Letters II";
-font-family: "60s pop"*/
+  font-family: 'Monoton', cursive;
 }
 
 body {
@@ -66,8 +64,8 @@ src: local("letters II") local("letters-II"), url(letters.ii-fenotype.ttf);
 #labels {
   /*background-image: url("http://images.all-free-download.com/images/graphiclarge/metal_background_of_highdefinition_picture_2_169714.jpg");*/
   padding-left: 2%;
-  font-size: 40px;
-  line-height: 50%;
+  font-size: 34px;
+  line-height: 90%;
   /*border-right: black solid 1px;*/
   padding-right: 2%;
   /*margin-top: -1.2%;*/
@@ -109,10 +107,10 @@ input {
 }
 
 .box {
-  padding-top: 42px;
+  padding-top: 36px;
   display: inline;
   width: 60px;
-  height: 65px;
+  height: 60px;
   background: radial-gradient(#eee, #d0d0d0);
   border: black solid 1px;
   border: grey outset 1px;
@@ -132,8 +130,8 @@ input {
 }
 
 .test {
-  margin-top: -3px;
-  margin-bottom: -3px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .bpm {
@@ -226,7 +224,7 @@ input {
 
 .userInput {
   margin-right: 1%;
-  width: 400px;
+  width: 372px;
   text-align: center;
   /*margin-top: -0.7%;*/
   font-size: 40px;
@@ -234,7 +232,7 @@ input {
 }
 
 .inputMain {
-  margin-left: 30%;
+  margin-left: 35%;
 }
 
 .inputLabel {
@@ -263,17 +261,18 @@ input {
 }
 
 .nav {
-  margin-left: 7%;
+  margin-left: 3%;
+  white-space: nowrap;
 }
 
 .login {
-  margin-left: 4%;
+  /*margin-left: 4%;*/
   width: 23%;
-  height: 70px;
+  height: 80px;
 }
 
 .signup {
-  height: 70px;
+  height: 80px;
 }
 
 .back {
@@ -297,10 +296,50 @@ input {
 
 .subroute {
   padding-top: 1%;
-  padding-bottom: 3.5%;
+  padding-bottom: 4%;
   margin-bottom: 1%;
 }
 
 .subroute.first {
-  margin-left: 36%;
+  background-position-x: 1.2%;
+  margin-left: 34%;
+}
+
+.tutP {
+  margin-right: 2%;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.big {
+  text-align: center;
+  font-size: 190%;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+}
+
+.large {
+  margin-right: 10%;
+  margin-left: 9%;
+  width: 38.5%;
+  height: 38.5%;
+}
+
+button {
+  font-family: "BadMofo", monospace;
+  font-family: 'Monoton', cursive;
+}
+
+.s {
+  margin-left: 3%;
+}
+
+.beatsButton>.left {
+  margin-left: -20px;
+}
+
+.circle {
+  /*left: -32px !important;*/
 }
